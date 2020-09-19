@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Minimal Envelope Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="envelope">
+      <div class="cover">
+        <div class="bottom"></div>
+        <div class="side">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <div class="top">
+          <div class="top-cover"></div>
+        </div>
+      </div>
+      <div class="paper">
+        <div class="message">
+          <span>Дорогие Александр и Екатерина!</span>
+          <p>
+            Приглашаем Вас на торжество, посвященное нашему бракосочетанию,
+            которое состоится 26 сентября 2020 года в 16:00 на терассе ресторана Baldenini
+            расположеного по адресу ул. Будславская 2.
+            Будем счастливы видеть Вас на нашем празднике!
+          </p>
+          <span>Ксения и Александр!</span>
+        </div>
+        <div class="close"><i class="fa fa-times"> </i></div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+/*----Variables ----*/
+/*----Abstract Classes ----*/
+.envelope, .envelope .paper, .envelope .paper .message, .envelope .shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*----Components ----*/
+.envelope {
+  background: #7979aa;
+  width: 300px;
+  height: 180px;
+}
+.envelope .cover {
+  position: relative;
+}
+.envelope .cover .top,
+.envelope .cover .side,
+.envelope .cover .bottom {
+  position: absolute;
+  width: 300px;
+  z-index: 2;
+}
+.envelope .cover .top {
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 3px rgba(50, 0, 50, 0.1));
+}
+.envelope .cover .top .top-cover {
+  height: calc(150px - 30px);
+  background: #7979aa;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.envelope .cover .side {
+  filter: drop-shadow(0px -1px 3px rgba(50, 0, 50, 0.2));
+  height: 180px;
+}
+.envelope .cover .side .left,
+.envelope .cover .side .right {
+  position: absolute;
+  background: #5d5d93;
+  width: calc(300px / 2);
+  height: 180px;
+}
+.envelope .cover .side .left {
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.envelope .cover .side .right {
+  right: 0;
+  -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+.envelope .cover .bottom {
+  top: calc(180px / 2);
+  height: calc(180px / 2);
+  background: #555587;
+  -webkit-clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+  clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+}
+
+.envelope .paper {
+  position: relative;
+  /* width: 120px; */
+  width: 90%;
+  height: 70px;
+  background: #dadae7;
+  color: #50507f;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(50, 0, 50, 0.3);
+  z-index: 1;
+}
+.envelope .paper .message {
+  opacity: 0;
+  width: 95%;
+  display: block;
+  font-family: "Satisfy", cursive;
+  text-align: center;
+}
+.envelope .paper .close {
+  cursor: pointer;
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  right: 10px;
+}
+.envelope .shadow {
+  height: 30px;
+  width: 160px;
+  top: 250%;
+  border-radius: 50%;
+  background-image: radial-gradient(rgba(0, 0, 50, 0.3), rgba(250, 250, 250, 0));
+  filter: blur(5px);
+}

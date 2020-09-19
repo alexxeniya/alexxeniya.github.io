@@ -62,3 +62,20 @@ zoom
 
 opacity  
   .to(".paper .message", { opacity: 1 }, 0.5);
+
+
+const guests = $('#guests');
+const he = getParameterByName('he');
+const she = getParameterByName('she');
+if (he && !she) guests.text(`Дорогой ${he}!`);
+if (she && !he) guests.text(`Дорогая ${she}!`);
+if (he && she) guests.text(`Дорогие ${he} и ${she}!`);
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}

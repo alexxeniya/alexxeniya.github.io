@@ -65,11 +65,23 @@ opacity
 
 
 const guests = $('#guests');
+const pronouns = $('.pronoun');
 const he = getParameterByName('he');
 const she = getParameterByName('she');
-if (he && !she) guests.text(`Дорогой ${he}!`);
-if (she && !he) guests.text(`Дорогая ${she}!`);
-if (he && she) guests.text(`Дорогие ${he} и ${she}!`);
+
+if (he && !she) {
+  guests.text(`Дорогой ${he}!`);
+  pronouns.text('тебя')
+}
+if (she && !he) {
+  guests.text(`Дорогая ${she}!`);
+  pronouns.text('тебя')
+}
+if (he && she) {
+  guests.text(`Дорогие ${he} и ${she}!`);
+  pronouns.text('вас')
+}
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');

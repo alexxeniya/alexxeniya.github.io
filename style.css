@@ -78,7 +78,7 @@
   opacity: 0;
   width: 95%;
   display: block;
-  font-family: Monotype Corsiva;
+  font-family: 'Marck Script', cursive;
   text-align: center;
 }
 .envelope .paper .close {
@@ -103,7 +103,7 @@
 
 body {
   margin: 1px;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #50507f);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }

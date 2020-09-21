@@ -119,3 +119,13 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+#guests {
+  display: block;
+  margin-bottom: 15px;
+}
+
+#we {
+  display: block;
+  margin-top: 10px;
+}
